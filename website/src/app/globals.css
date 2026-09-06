@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+:root {
+  --bg-app: #0a0a0a;
+  --bg-surface: #121214;
+  --bg-surface-2: #1a1a1d;
+  --border: #2a2a2e;
+  --border-strong: #3a3a3f;
+
+  --text-primary: #e8e8ec;
+  --text-secondary: #9a9aa3;
+  --text-muted: #6b6b72;
+
+  --accent: #b9b9f2;
+  --accent-dim: #7d7db3;
+
+  --status-success: #4ade80;
+  --status-warning: #facc15;
+  --status-error: #f87171;
+  --status-critical: #ff4d4d;
+  --status-info: #60a5fa;
+
+  --long: #4ade80;
+  --short: #f87171;
+
+  --sidebar-width: 240px;
+  --sidebar-collapsed: 56px;
+  --topbar-height: 48px;
+
+  --font-sans: -apple-system, "Segoe UI", Inter, Roboto, sans-serif;
+  --font-serif: Georgia, "Times New Roman", Times, serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+}
+
+@theme inline {
+  --color-bg-app: var(--bg-app);
+  --color-bg-surface: var(--bg-surface);
+  --color-bg-surface-2: var(--bg-surface-2);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-accent: var(--accent);
+  --color-accent-dim: var(--accent-dim);
+  --color-status-success: var(--status-success);
+  --color-status-warning: var(--status-warning);
+  --color-status-error: var(--status-error);
+  --color-status-critical: var(--status-critical);
+  --color-status-info: var(--status-info);
+  --color-long: var(--long);
+  --color-short: var(--short);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-app);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+.font-brand {
+  font-family: var(--font-serif);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.panel {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.panel-inset {
+  background: var(--bg-surface-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+/* Dense data table */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+}
+
+.data-table th {
+  text-align: left;
+  color: var(--text-muted);
+  font-weight: 500;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.data-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background: var(--bg-surface-2);
+}
+
+.data-table tbody tr:hover {
+  background: color-mix(in srgb, var(--accent) 6%, var(--bg-surface));
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
